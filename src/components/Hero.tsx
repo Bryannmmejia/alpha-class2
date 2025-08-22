@@ -1,20 +1,22 @@
 import React from 'react';
 import './Hero.css';
+import { useNavigate } from 'react-router-dom';
 
 const Hero: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <section className="hero">
       <div className="hero-container">
         <div className="hero-content">
           <div className="hero-text">
             <h1 className="hero-headline">
-              A capital app for independents
+            Una aplicación de capital para independientes
             </h1>
             <p className="hero-subheadline">
-              Get paid faster and manage your finances effortlessly. Perfect for freelancers seeking a seamless financial solution.
+            Recibe pagos más rápido y gestiona tus finanzas sin esfuerzo. Ideal para freelancers que buscan una solución financiera integral.
             </p>
             <button className="hero-cta">
-              Join today
+              Unete hoy
             </button>
           </div>
           
@@ -31,7 +33,7 @@ const Hero: React.FC = () => {
                   </div>
                 </div>
                 <div className="app-content">
-                  <h2 className="app-title">Payments</h2>
+                  <h2 className="app-title">Pagos</h2>
                   <div className="visa-card">
                     <div className="card-info">
                       <span className="visa-logo">VISA</span>
@@ -39,9 +41,17 @@ const Hero: React.FC = () => {
                     </div>
                   </div>
                   <div className="integration-message">
-                    <p>Integrate with just one single tap</p>
+                    <p>Gestiona tu Capital YA! 🚀 en el boton de abajo</p>
                     <div className="tap-indicator">
-                      <div className="tap-circle"></div>
+                      <div
+                        className="tap-circle"
+                        style={{ cursor: 'pointer' }}
+                        onClick={() => navigate('/signup')}
+                        title="Ir a registro"
+                        tabIndex={0}
+                        role="button"
+                        onKeyPress={e => { if (e.key === 'Enter' || e.key === ' ') navigate('/signup'); }}
+                      ></div>
                     </div>
                   </div>
                 </div>

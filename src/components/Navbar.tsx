@@ -20,22 +20,23 @@ const Navbar: React.FC = () => {
       <div className="navbar-container">
         {/* Logo */}
         <div className="navbar-logo">
-          <Link to="/">
-            <h2>TrackIt</h2>
+          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <img src="/logo-navbar.png" alt="Logo" style={{ height: '52px', width: '52px' }} />
+            <h2>CapitalYA!</h2>
           </Link>
         </div>
 
         {/* Desktop Navigation Links */}
         <div className="navbar-links">
-          <a href="#features" className="navbar-link">Features</a>
-          <a href="#pricing" className="navbar-link">Pricing</a>
-          <a href="#support" className="navbar-link">Support</a>
+          <a href="#features" className="navbar-link">Caracteristicas</a>
+          <a href="#pricing" className="navbar-link">Precios</a>
+          <a href="#support" className="navbar-link">Soporte</a>
         </div>
 
         {/* CTA Buttons */}
         <div className="navbar-cta">
-          <Link to="/login" className="btn-login">Log In</Link>
-          <Link to="/signup" className="btn-signup">Sign Up</Link>
+          <Link to="/login" className="btn-login">Iniciar sesión</Link>
+          <Link to="/signup" className="btn-signup">Registrarse</Link>
         </div>
 
         {/* Mobile Hamburger Menu */}
